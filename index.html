@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div style="background-color: #218c74;" class="head">
+        <a href="#">File</a>
+        <a href="#" class="head-text">Home</a>
+        <a href="#">Insert</a>
+        <a href="#">Layout</a>
+        <a href="#">Help</a>
+    </div>
+
+    <div class="container">
+        <button id="copy"><span class="material-icons">
+            content_copy
+        </span></button>
+        <button id="cut"><span class="material-icons">
+            content_cut
+        </span></button>
+        <button id="paste"><span class="material-icons">
+            content_paste
+        </span></button>
+    
+    
+        <select id="font-style" class="fontStyle">
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans-serif</option>
+            <option value="monospace">Monospace</option>
+            <option value="cursive">Cursive</option>
+            <option value="fantasy">Fantasy</option>
+        </select>
+    
+        <select id="font-size">
+            <option value="14px">14</option>
+            <option value="16px">16</option>
+            <option value="18px">18</option>
+            <option value="20px">20</option>
+        </select>
+    
+        <button id="bold-btn"><span class="material-icons">
+            format_bold
+        </span></button>
+        <button id="italics-btn"><span class="material-icons">
+            format_italic
+        </span></button>
+        <button id="underline-btn"><span class="material-icons">
+            format_underlined
+        </span></button>
+    
+    
+        <button id="left-align"><span class="material-icons">
+            format_align_left
+        </span></button>
+        <button id="centre"><span class="material-icons">
+            format_align_center
+        </span></button>
+        <button id="right-align"><span class="material-icons">
+            format_align_right
+        </span></button>
+    
+    
+        <!-- <div class="color">
+            <label for="text-color">Text</label>
+            <input id='text-color' type="color">
+        </div> -->
+
+        <div class="color-prop">
+            <span class="material-icons">
+                format_color_text
+            </span>
+            <input id='text-color' type="color" class="font-color-prop">
+        </div>
+    
+        <!-- <div class="color">
+            <label for="back-color">BG</label>
+            <input id='back-color' type="color">
+        </div> -->
+
+        <div class="color-prop">
+            <span class="material-icons">
+                format_color_fill
+            </span>
+            <input id='back-color' type="color" class="BGcolor-prop">
+        </div>
+
+
+        <button onclick="downloadJson()"><span class="material-icons">
+            cloud_download
+        </span></button>
+        <input type="file" id="jsonFile" accept=".json" />
+    
+    
+    
+    
+    
+    
+    </div>
+    
+
+    <div class="formula-container">
+        <input readonly id="heading">
+        <div><img height="20px" class="formula-icon" src="https://img.icons8.com/ios/50/000000/formula-fx.png"></div>
+        <input type="text" class="formula">
+    </div>
+
+
+    <table id="table">
+        <thead>
+            <tr id="table-head">
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div class="add-sheets-container" style="padding-left: 10px; background-color: white; position: fixed; bottom: 0; left:0; right: 0; height: 50px; display: flex; align-items: center; gap:20px; ">
+        <div class="add-sheet-btn" style="cursor: pointer;" onclick="addSheet()"><span class="material-icons">
+            post_add
+        </span></div>
+        <div style="text-decoration: underline; cursor: pointer;" onclick="sheetSelect(0)">Sheet1</div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
